@@ -1,1 +1,100 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
 
+% Set page margins
+\geometry{top=0.75in, bottom=0.75in, left=0.75in, right=0.75in}
+
+% Define color
+\definecolor{mycolor}{RGB}{0, 102, 204}
+
+% Customize section titles
+\titleformat{\section}{\color{mycolor}\normalfont\Large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\color{mycolor}\normalfont\bfseries}{}{0em}{}
+
+% Define custom commands
+\newcommand{\resumeSection}[1]{
+    \section*{\uppercase{#1}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill \textit{#4} \\
+}
+
+\newcommand{\resumeItem}[1]{
+    \item{#1}
+}
+
+\newcommand{\resumeSubItem}[1]{
+    \item \small{#1}
+}
+
+\newcommand{\resumeListStart}{
+    \begin{itemize}[left=0em]
+}
+
+\newcommand{\resumeListEnd}{
+    \end{itemize}
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+% Header
+\begin{center}
+    \textbf{\Huge Your Name} \\
+    \vspace{0.2em}
+    \textit{Your Job Title} \\
+    \vspace{0.5em}
+    Email: \texttt{youremail@example.com} | Phone: (123) 456-7890 | LinkedIn: \texttt{linkedin.com/in/yourprofile}
+\end{center}
+
+% Education
+\resumeSection{Education}
+\resumeSubheading
+    {Your University}{City, State}
+    {Your Degree}{Month Year -- Month Year}
+    \resumeListStart
+        \resumeItem{Relevant coursework: Course 1, Course 2, Course 3}
+    \resumeListEnd
+
+% Experience
+\resumeSection{Experience}
+\resumeSubheading
+    {Your Job Title}{Company Name, City, State}
+    {Month Year -- Present}{}
+    \resumeListStart
+        \resumeItem{Responsibility or achievement 1}
+        \resumeItem{Responsibility or achievement 2}
+    \resumeListEnd
+
+\resumeSubheading
+    {Previous Job Title}{Previous Company Name, City, State}
+    {Month Year -- Month Year}{}
+    \resumeListStart
+        \resumeItem{Responsibility or achievement 1}
+        \resumeItem{Responsibility or achievement 2}
+    \resumeListEnd
+
+% Skills
+\resumeSection{Skills}
+\resumeListStart
+    \resumeItem{Skill 1}
+    \resumeItem{Skill 2}
+    \resumeItem{Skill 3}
+\resumeListEnd
+
+% Projects
+\resumeSection{Projects}
+\resumeSubheading
+    {Project Title}{}
+    {Description of the project, technologies used, and outcomes.}{}
+    \resumeListStart
+        \resumeItem{Details about the project}
+    \resumeListEnd
+
+\end{document}
